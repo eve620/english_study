@@ -1,7 +1,7 @@
 "use client"
 import React, {useEffect, useRef, useState} from "react";
-import Answer from "@/app/main/_component/Answer";
-import Question from "@/app/main/_component/Question";
+import Answer from "@/app/main/component/Answer";
+import Question from "@/app/main/component/Question";
 
 const courseDate = [
     {
@@ -31,7 +31,7 @@ const courseDate = [
     }
 ]
 
-export default () => {
+export default function Practice() {
     const [currentCourse, setCurrentCourse] = useState(courseDate[0])
     const statementIndex = useRef(0)
     const {chinese, english, soundmark} = currentCourse.statements[statementIndex.current]
@@ -86,7 +86,8 @@ export default () => {
                 <div>
                     {currentMode === "correct" ?
                         (<button onClick={handleNext}
-                                 style={{backgroundColor: "lightblue", padding: "10px", borderRadius: "20px"}}>Next Word</button>)
+                                 style={{backgroundColor: "lightblue", padding: "10px", borderRadius: "20px"}}>Next
+                            Word</button>)
                         : (<input type="text" value={inputValue}
                                   onChange={handleInputValue}
                                   onKeyDown={handleKeyDown}

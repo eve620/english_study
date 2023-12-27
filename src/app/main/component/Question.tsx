@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({word}: { word: string }) => {
+export default function Question({word}: { word: string }) {
     return (
         <div>{word}</div>
     )

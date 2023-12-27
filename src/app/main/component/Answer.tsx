@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({word, soundMark}: { word: string, soundMark: string }) => {
+export default function Answer({word, soundMark}: { word: string, soundMark: string }) {
     return (
         <div>
             <div>{word}</div>
